@@ -1,6 +1,6 @@
 import React from "react";
 import { Link, Box, Flex, Text, Button, Stack, Menu } from "@chakra-ui/react";
-
+import { useColorMode, useColorModeValue } from "@chakra-ui/color-mode";
 import { AiFillGithub } from "react-icons/ai";
 import { WiMoonAltFirstQuarter } from "react-icons/wi";
 
@@ -8,12 +8,12 @@ import Logo from "./Logo";
 
 const NavBar = (props) => {
   const [isOpen, setIsOpen] = React.useState(false);
-
   const toggle = () => setIsOpen(!isOpen);
-
+  const color = useColorModeValue("black", "white");
+  //color={["white", "white", "black", "black"]}
   return (
-    <NavBarContainer {...props}>
-      <Logo w="250px" color={["white", "white", "black", "black"]} />
+    <NavBarContainer {...props} color={color}>
+      <Logo w="250px" olor={color} />
       <MenuToggle toggle={toggle} isOpen={isOpen} />
       <MenuLinks isOpen={isOpen} />
     </NavBarContainer>
@@ -61,6 +61,9 @@ const MenuItem = ({ children, isLast, to = "/", ...rest }) => {
 };
 
 const MenuLinks = ({ isOpen }) => {
+  const color = useColorModeValue("white", "black");
+  const colorText = useColorModeValue("black", "teal.100");
+  const { toggleColorMode } = useColorMode();
   return (
     <Box
       display={{ base: isOpen ? "block" : "none", md: "block" }}
@@ -81,8 +84,8 @@ const MenuLinks = ({ isOpen }) => {
             <Button
               size="sm"
               rounded="md"
-              color={["black", "black", "white", "white"]}
-              bg={["white", "white", "black", "black"]}
+              color={color}
+              bg={colorText}
               _hover={{
                 bg: [
                   "primary.100",
@@ -95,10 +98,10 @@ const MenuLinks = ({ isOpen }) => {
               ¡Contactame!
             </Button>
           </MenuItem>
-          <Link>
+          <Link onClick={toggleColorMode}>
             <WiMoonAltFirstQuarter size="20" />
           </Link>
-          <Link>
+          <Link href="https://github.com/nahuerodcast" target="_blank">
             <AiFillGithub size="20" />
           </Link>
         </Menu>
@@ -120,8 +123,6 @@ const NavBarContainer = ({ children, ...props }) => {
       bg={["black", "black", "transparent", "transparent"]}
       color={["white", "white", "black", "black"]}
       boxShadow="lg"
-      pos="fixed"
-      zIndex="sticky"
       {...props}
     >
       {children}
