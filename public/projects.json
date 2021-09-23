@@ -1,0 +1,26 @@
+[
+    {
+      "imageUrl": "../officialrodcast.png",
+      "language" : "HTML5 + CSS3 + SASS",
+      "title": "Official Rodcast",
+      "colorScheme": "red",
+      "url": "https://github.com/nahuerodcast/officialrodcast",
+      "desc":"Primer sitio estático creado en HTML y CSS"
+    },
+    {
+        "imageUrl": "../inverappJS.png",
+        "language" : "Javascript/ES6",
+        "title": "Inverapp JS",
+        "colorScheme": "yellow",
+        "url": "https://github.com/nahuerodcast/inverappJS",
+        "desc":"Simulador de inversiones creado en Vanilla Javascript"
+      },
+      {
+        "imageUrl": "../inverappReact.png",
+        "language" : "React.JS",
+        "title": "Inverapp React",
+        "colorScheme": "cyan",
+        "url": "https://github.com/nahuerodcast/inverapp",
+        "desc":"Aplicación de inversiones con recomendación personalizada"
+      }
+  ]

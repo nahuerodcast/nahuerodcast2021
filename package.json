@@ -17,8 +17,11 @@
     "emotion-theming": "^11.0.0",
     "framer-motion": "^4.1.17",
     "react": "^17.0.2",
+    "react-devicon": "^0.1.9",
     "react-dom": "^17.0.2",
     "react-icons": "^4.2.0",
+    "react-pdf": "^5.3.2",
+    "react-reveal": "^1.2.2",
     "react-scripts": "4.0.3",
     "web-vitals": "^1.1.2"
   },

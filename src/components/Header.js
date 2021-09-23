@@ -9,11 +9,11 @@ import Logo from "./Logo";
 const NavBar = (props) => {
   const [isOpen, setIsOpen] = React.useState(false);
   const toggle = () => setIsOpen(!isOpen);
-  const color = useColorModeValue("black", "white");
+  const color = useColorModeValue("darkgray", "white");
   //color={["white", "white", "black", "black"]}
   return (
     <NavBarContainer {...props} color={color}>
-      <Logo w="250px" olor={color} />
+      <Logo w="250px" color={useColorModeValue("black", "white")} />
       <MenuToggle toggle={toggle} isOpen={isOpen} />
       <MenuLinks isOpen={isOpen} />
     </NavBarContainer>
@@ -62,8 +62,9 @@ const MenuItem = ({ children, isLast, to = "/", ...rest }) => {
 
 const MenuLinks = ({ isOpen }) => {
   const color = useColorModeValue("white", "black");
-  const colorText = useColorModeValue("black", "teal.100");
+  const colorText = useColorModeValue("black", "teal.300");
   const { toggleColorMode } = useColorMode();
+
   return (
     <Box
       display={{ base: isOpen ? "block" : "none", md: "block" }}
@@ -77,27 +78,46 @@ const MenuLinks = ({ isOpen }) => {
         pt={[4, 4, 0, 0]}
       >
         <Menu>
-          <MenuItem to="/">Home</MenuItem>
-          <MenuItem to="/about">Acerca de mi</MenuItem>
-          <MenuItem to="/projects">Proyectos </MenuItem>
-          <MenuItem to="/contact" isLast>
+          <Link
+            to="/"
+            style={{ transition: "300ms ease all" }}
+            _hover={{ color: "black" }}
+          >
+            Home
+          </Link>
+          <Link
+            to="#about"
+            style={{ transition: "300ms ease all" }}
+            _hover={{ color: "black" }}
+          >
+            Acerca de mi
+          </Link>
+
+          <Link
+            to="#projects"
+            style={{ transition: "300ms ease all" }}
+            _hover={{ color: "black" }}
+          >
+            Proyectos
+          </Link>
+          <Link
+            to="/projects"
+            style={{ transition: "300ms ease all" }}
+            _hover={{ color: "black" }}
+            isLast
+          >
             <Button
               size="sm"
               rounded="md"
               color={color}
               bg={colorText}
               _hover={{
-                bg: [
-                  "primary.100",
-                  "primary.100",
-                  "primary.600",
-                  "primary.600",
-                ],
+                bg: "teal.400",
               }}
             >
               ¡Contactame!
             </Button>
-          </MenuItem>
+          </Link>
           <Link onClick={toggleColorMode}>
             <WiMoonAltFirstQuarter size="20" />
           </Link>
