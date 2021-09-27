@@ -1,15 +1,15 @@
-import { Container, Divider } from "@chakra-ui/layout";
 import React from "react";
+import { Container, Divider } from "@chakra-ui/layout";
 import Fade from "react-reveal/Fade";
+import Flip from "react-reveal/Flip";
 import { AboutMe } from "../../components/AboutMe";
-
 import { Education } from "../../components/Education";
 import { Experience } from "../../components/Experience";
 
 export const AboutMeContainer = () => {
   return (
     <>
-      <Fade top>
+      <Fade top delay="550px">
         <AboutMe />
       </Fade>
       <Fade top>
@@ -20,9 +20,9 @@ export const AboutMeContainer = () => {
       <Fade top>
         <Education />
       </Fade>
-      <Fade top>
+      <Flip left delay={500} duration={1000}>
         <Experience />
-      </Fade>
+      </Flip>
     </>
   );
 };

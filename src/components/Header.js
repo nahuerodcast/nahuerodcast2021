@@ -1,9 +1,9 @@
 import React from "react";
-import { Link, Box, Flex, Text, Button, Stack, Menu } from "@chakra-ui/react";
+import { Box, Flex, Button, Stack, Menu, Link } from "@chakra-ui/react";
 import { useColorMode, useColorModeValue } from "@chakra-ui/color-mode";
 import { AiFillGithub } from "react-icons/ai";
 import { WiMoonAltFirstQuarter } from "react-icons/wi";
-
+import { Link as ReactLink } from "react-router-dom";
 import Logo from "./Logo";
 
 const NavBar = (props) => {
@@ -50,16 +50,6 @@ const MenuToggle = ({ toggle, isOpen }) => {
   );
 };
 
-const MenuItem = ({ children, isLast, to = "/", ...rest }) => {
-  return (
-    <Link href={to}>
-      <Text display="block" {...rest}>
-        {children}
-      </Text>
-    </Link>
-  );
-};
-
 const MenuLinks = ({ isOpen }) => {
   const color = useColorModeValue("white", "black");
   const colorText = useColorModeValue("black", "teal.300");
@@ -82,28 +72,32 @@ const MenuLinks = ({ isOpen }) => {
             to="/"
             style={{ transition: "300ms ease all" }}
             _hover={{ color: "black" }}
+            as={ReactLink}
           >
             Home
           </Link>
           <Link
-            to="#about"
+            to="/about"
             style={{ transition: "300ms ease all" }}
             _hover={{ color: "black" }}
+            as={ReactLink}
           >
             Acerca de mi
           </Link>
 
           <Link
-            to="#projects"
+            to="/projects"
             style={{ transition: "300ms ease all" }}
             _hover={{ color: "black" }}
+            as={ReactLink}
           >
             Proyectos
           </Link>
           <Link
-            to="/projects"
+            to="/contact"
             style={{ transition: "300ms ease all" }}
             _hover={{ color: "black" }}
+            as={ReactLink}
             isLast
           >
             <Button
@@ -118,9 +112,13 @@ const MenuLinks = ({ isOpen }) => {
               ¡Contactame!
             </Button>
           </Link>
-          <Link onClick={toggleColorMode}>
+          <Button
+            onClick={toggleColorMode}
+            style={{ borderRadius: "30px", padding: 0 }}
+            variant="ghost"
+          >
             <WiMoonAltFirstQuarter size="20" />
-          </Link>
+          </Button>
           <Link href="https://github.com/nahuerodcast" target="_blank">
             <AiFillGithub size="20" />
           </Link>

@@ -1,9 +1,9 @@
+import React from "react";
 import { Container, Divider, Link, Text } from "@chakra-ui/layout";
 import { FaLinkedin, FaGithubSquare } from "react-icons/fa";
 import { IoMdMail } from "react-icons/io";
 import { Flex } from "@chakra-ui/react";
 import { useColorModeValue } from "@chakra-ui/color-mode";
-import React from "react";
 
 export const Footer = () => {
   const color = useColorModeValue("darkgray", "white");
@@ -12,7 +12,7 @@ export const Footer = () => {
       <Divider />
       <Flex h="auto" justifyContent="center" alignItems="center" m="2">
         <Container color={color} mb="4">
-          <Flex justifyContent="center" mt="2" mb="2">
+          <Flex justifyContent="center" mt="2" mb="2" alignItems="center">
             <Link
               _hover={{ color: "black" }}
               m="2"
@@ -40,14 +40,18 @@ export const Footer = () => {
               <FaGithubSquare />
             </Link>
           </Flex>
-          <Flex justifyContent="center" mb="1">
+          <Flex
+            flexDirection={["column", "column", "row", "row"]}
+            justifyContent="center"
+            alignItems="center"
+            mb="1"
+          >
             Portfolio realizado en
             <Text ml="1" mr="1" color={color}>
               React.js
             </Text>
-            por{" "}
+            por
             <Text ml="1" fontWeight="bold">
-              {" "}
               Nahuel rodriguez
             </Text>
           </Flex>

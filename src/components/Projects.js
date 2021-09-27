@@ -4,7 +4,10 @@ import { Badge, Box, Flex, Link } from "@chakra-ui/layout";
 
 export const Projects = ({ projects }) => {
   return (
-    <Flex flexDirection="row" justifyContent="center">
+    <Flex
+      flexDirection={["column", "column", "row", "row"]}
+      justifyContent="center"
+    >
       {projects.map((project) => {
         return (
           <Box
@@ -13,6 +16,10 @@ export const Projects = ({ projects }) => {
             borderRadius="lg"
             overflow="hidden"
             m="2"
+            ml="4"
+            mr="4"
+            style={{ transition: "300ms ease all" }}
+            _hover={{ transform: "scale(1.05)" }}
           >
             <Link href={project.url} target="_blank">
               <Image
