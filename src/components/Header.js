@@ -137,7 +137,8 @@ const NavBarContainer = ({ children, ...props }) => {
       wrap="wrap"
       w="100%"
       mb={8}
-      p={6}
+      py={6}
+      px={"15vw"}
       bg={["black", "black", "transparent", "transparent"]}
       color={["white", "white", "black", "black"]}
       boxShadow="lg"

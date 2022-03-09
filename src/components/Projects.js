@@ -5,8 +5,11 @@ import { Badge, Box, Flex, Link } from "@chakra-ui/layout";
 export const Projects = ({ projects }) => {
   return (
     <Flex
+      w={"100%"}
       flexDirection={["column", "column", "row", "row"]}
+      flexWrap={"wrap"}
       justifyContent="center"
+      px={"10vw"}
     >
       {projects.map((project) => {
         return (
@@ -16,8 +19,7 @@ export const Projects = ({ projects }) => {
             borderRadius="lg"
             overflow="hidden"
             m="2"
-            ml="4"
-            mr="4"
+            mx="4"
             style={{ transition: "300ms ease all" }}
             _hover={{ transform: "scale(1.05)" }}
           >
@@ -25,8 +27,7 @@ export const Projects = ({ projects }) => {
               <Image
                 src={project.imageUrl}
                 alt={project.imageAlt}
-                h="200px"
-                w="350px"
+                w="500px"
                 objectFit="cover"
               />
             </Link>
@@ -57,7 +58,6 @@ export const Projects = ({ projects }) => {
                 fontSize="12px"
                 as="h6"
                 lineHeight="tight"
-                isTruncated
               >
                 {project.desc}
               </Box>

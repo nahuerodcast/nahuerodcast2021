@@ -4,13 +4,9 @@ import { Link } from "react-router-dom";
 
 export default function Logo(props) {
   return (
-    <Box {...props} ml="10">
+    <Box {...props}>
       <Flex alignItems="center">
-        <Avatar
-          name="Nahuel Rodriguez"
-          size="sm"
-          src="https://media-exp1.licdn.com/dms/image/C4D03AQFvgK8GwuEfIQ/profile-displayphoto-shrink_400_400/0/1566176447267?e=1637193600&v=beta&t=GW_GJcGwNqN6x94U9qfy4QDTM_rHhwSJS1LQAzrPglo"
-        />
+        <Avatar name="Nahuel Rodriguez" size="sm" src="../../profile-pic.jpg" />
         <Link
           to="/"
           style={{ transition: "300ms ease all" }}

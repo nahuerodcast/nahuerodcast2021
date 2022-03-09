@@ -24,8 +24,10 @@ export const Experience = () => {
           borderColor="gray.200"
           textAlign="left"
           borderRadius="10"
-          w={["350px", "auto", "auto", "auto"]}
+          // w={["350px", "auto", "auto", "auto"]}
+          mx={"10vw"}
           padding="2"
+          py={8}
           pl="10"
           pr="10"
           marginTop="20"
@@ -36,13 +38,16 @@ export const Experience = () => {
             alignItems="center"
           >
             <Flex
-              //  w={["350px", "350px", "350px", "350px"]}
+              w={["350px", "350px", "350px", "350px"]}
               alignItems="center"
               justifyContent="center"
               mt="4"
               mb="4"
             >
-              <Heading ml="auto">
+              <Heading
+                ml="auto"
+                textAlign={["center", "center", "left", "left"]}
+              >
                 También soy Tutor
                 <Text fontWeight="extrabold" mr="2"></Text>
                 de Desarrollo Web en
@@ -56,7 +61,15 @@ export const Experience = () => {
                 >
                   Coderhouse
                 </Link>
-                <Flex mt="2">
+                <Flex
+                  mt="2"
+                  justifyContent={[
+                    "center",
+                    "center",
+                    "flex-start",
+                    "flex-start",
+                  ]}
+                >
                   <AiFillHtml5 color="#e54d26" />
                   <FaCss3Alt color="#0096d1" />
                   <DiSass color="#d56ea3" />
@@ -71,6 +84,7 @@ export const Experience = () => {
               _hover="none"
             >
               <Image
+                borderRadius={4}
                 src="../tutoria.jpeg"
                 height="auto"
                 width={["350px", "450px", "450px", "450px"]}

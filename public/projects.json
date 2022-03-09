@@ -1,26 +1,50 @@
 [
-    {
-      "imageUrl": "../officialrodcast.png",
-      "language" : "HTML5 + CSS3 + SASS",
-      "title": "Official Rodcast",
-      "colorScheme": "red",
-      "url": "https://github.com/nahuerodcast/officialrodcast",
-      "desc":"Primer sitio estático creado en HTML y CSS"
-    },
-    {
-        "imageUrl": "../inverappJS.png",
-        "language" : "Javascript/ES6",
-        "title": "Inverapp JS",
-        "colorScheme": "yellow",
-        "url": "https://github.com/nahuerodcast/inverappJS",
-        "desc":"Simulador de inversiones creado en Vanilla Javascript"
-      },
-      {
-        "imageUrl": "../inverappReact.png",
-        "language" : "React.JS",
-        "title": "Inverapp React",
-        "colorScheme": "cyan",
-        "url": "https://github.com/nahuerodcast/inverapp",
-        "desc":"Aplicación de inversiones con recomendaciones"
-      }
-  ]
+  {
+    "imageUrl": "../inverapp-v2.png",
+    "language": "React + Chakra UI + Firebase",
+    "title": "Inverapp v2",
+    "colorScheme": "green",
+    "url": "https://github.com/nahuerodcast/inverapp-v2",
+    "desc": "Inverapp es una app simuladora de inversiones en criptomonedas. Posee un saldo demo con el que podes practicar invertir sin arriesgar capital."
+  },
+  {
+    "imageUrl": "../todos-app.png",
+    "language": "React + Chakra UI + Firebase",
+    "title": "Todos app",
+    "colorScheme": "orange",
+    "url": "https://github.com/nahuerodcast/todoreact",
+    "desc": "Aplicación simple de tareas pendientes. Podes iniciar sesión con Google Auth, añadir una tarea, completarla y eliminarla. "
+  },
+  {
+    "imageUrl": "../portfolio.png",
+    "language": "React + Chakra UI",
+    "title": "Portfolio personal",
+    "colorScheme": "cyan",
+    "url": "https://github.com/nahuerodcast/react-portfolio-nahuel",
+    "desc": "Portfolio realizado en React JS, con Chakra UI, incluyendo dark-mode, animaciones y redirección a canales de contacto."
+  },
+  {
+    "imageUrl": "../inverappReact.png",
+    "language": "React.JS",
+    "title": "Inverapp 1.0",
+    "colorScheme": "blue",
+    "url": "https://github.com/nahuerodcast/inverapp",
+    "desc": "Inverapp 1.0 es un proyecto inicial de una aplicación de inversiones con recomendaciones."
+  },
+  {
+    "imageUrl": "../inverappJS.png",
+    "language": "Javascript/ES6",
+    "title": "Inverapp JS",
+    "colorScheme": "yellow",
+    "url": "https://github.com/nahuerodcast/inverappJS",
+    "desc": "Simulador de inversiones creado en Vanilla Javascript. Primer breve proyecto para el curso dictado por Coderhouse. "
+  },
+  {
+    "imageUrl": "../officialrodcast.png",
+    "language": "HTML5 + CSS3 + SASS",
+    "title": "Official Rodcast",
+    "colorScheme": "red",
+    "url": "https://github.com/nahuerodcast/officialrodcast",
+    "desc": "Sitio web oficial de Rodcast. Primer proyecto de tipo sitio estático realizado con HTML + CSS, Bootstrap y grids. "
+  }
+]

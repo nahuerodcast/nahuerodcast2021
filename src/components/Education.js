@@ -20,8 +20,11 @@ export const Education = () => {
               justifyContent="center"
               alignItems="center"
             >
-              <Flex>
-                Estudié en
+              <Flex
+                flexDirection={["column", "column", "row", "row"]}
+                textAlign="center"
+              >
+                Estudié desarrollo Front-end en
                 <Link
                   href="https://www.coderhouse.com/"
                   target="_blank"
@@ -33,7 +36,6 @@ export const Education = () => {
                   </Text>
                 </Link>
               </Flex>
-              desarrollo Front-end
             </Flex>
           </Heading>
           <Heading
@@ -52,36 +54,41 @@ export const Education = () => {
         flexDirection={["column", "column", "row", "row"]}
         justifyContent="center"
         alignItems="center"
+        px={"10vw"}
+        flexWrap="wrap"
       >
         <Fade delay={250}>
           <Image
+            borderRadius={4}
             src="../desarrollo.png"
             height="250px"
             w="auto"
             alt="desarrollo web"
-            m="2"
+            mr="1"
             style={{ transition: "300ms ease all" }}
             _hover={{ transform: "scale(1.05)" }}
           />
         </Fade>
         <Fade delay={500}>
           <Image
+            borderRadius={4}
             src="../javascript.png"
             height="250px"
             w="auto"
             alt="javascript"
-            m="2"
+            mx="1"
             style={{ transition: "300ms ease all" }}
             _hover={{ transform: "scale(1.05)" }}
           />
         </Fade>
         <Fade delay={750}>
           <Image
+            borderRadius={4}
             src="../react.png"
             height="250px"
             w="auto"
             alt="react"
-            m="2"
+            ml="1"
             style={{ transition: "300ms ease all" }}
             _hover={{ transform: "scale(1.05)" }}
           />
